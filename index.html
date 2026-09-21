@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>गणपती पूजन व स्नेहभोजन</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --page:#0b0824;
+  --ink:#120d3a;
+  --plum:#2b1250;
+  --gold:#f6c96b;
+  --gold2:#d9973a;
+  --saffron:#ff9f43;
+  --rose:#ff7a9c;
+  --cream:#fff2d6;
+  --muted:#d9cdea;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+}
+
+body{
+  background:var(--page);
+  font-family:"Tiro Devanagari Marathi","Noto Serif Devanagari",serif;
+  color:var(--cream);
+  display:flex;
+  justify-content:center;
+  padding:16px 10px;
+}
+
+.card{
+  position:relative;
+  width:100%;
+  max-width:470px;
+  border-radius:26px;
+  overflow:hidden;
+  text-align:center;
+  padding:0 20px 34px;
+
+  background:
+   radial-gradient(circle at 50% 14%,rgba(255,159,67,.30),transparent 46%),
+   radial-gradient(circle at 12% 60%,rgba(255,122,156,.10),transparent 40%),
+   radial-gradient(circle at 90% 88%,rgba(246,201,107,.14),transparent 40%),
+   linear-gradient(180deg,#1a1150 0%,var(--plum) 55%,#3a1240 100%);
+
+  box-shadow:
+   0 0 0 1px rgba(246,201,107,.5),
+   0 24px 60px rgba(0,0,0,.6);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1.5px solid rgba(246,201,107,.55);
+  border-radius:19px;
+  pointer-events:none;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:1px dashed rgba(246,201,107,.28);
+  border-radius:15px;
+  pointer-events:none;
+}
+
+.stars{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.8;
+
+  background-image:
+   radial-gradient(1.4px 1.4px at 12% 8%,#fff,transparent),
+   radial-gradient(1px 1px at 30% 20%,#ffe9b0,transparent),
+   radial-gradient(1.6px 1.6px at 78% 12%,#fff,transparent),
+   radial-gradient(1px 1px at 90% 30%,#ffe9b0,transparent),
+   radial-gradient(1.2px 1.2px at 6% 42%,#fff,transparent),
+   radial-gradient(1px 1px at 94% 55%,#fff,transparent),
+   radial-gradient(1.2px 1.2px at 20% 78%,#ffe9b0,transparent),
+   radial-gradient(1.4px 1.4px at 85% 82%,#fff,transparent);
+
+  animation:tw 4s ease-in-out infinite alternate;
+}
+
+@keyframes tw{
+  from{opacity:.35}
+  to{opacity:.95}
+}
+
+.garland{
+  height:26px;
+  margin:0 -20px;
+  position:relative;
+  z-index:1;
+
+  background:
+   radial-gradient(circle at 10px 10px,var(--saffron) 0 6px,transparent 7px)
+   0 0/22px 24px repeat-x,
+   radial-gradient(circle at 21px 14px,#ffd15c 0 5px,transparent 6px)
+   0 0/22px 24px repeat-x;
+}
+
+.z{
+  position:relative;
+  z-index:2;
+}
+
+.namah{
+  font-family:"Yatra One",serif;
+  color:var(--gold);
+  font-size:19px;
+  letter-spacing:.5px;
+  margin-top:14px;
+}
+
+.emblem{
+  width:210px;
+  height:176px;
+  margin:4px auto 0;
+  display:block;
+  filter:drop-shadow(0 0 18px rgba(255,159,67,.55));
+}
+
+h1{
+  font-family:"Yatra One",serif;
+  font-weight:400;
+  font-size:clamp(36px,10.5vw,50px);
+  line-height:1.18;
+  margin-top:2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff0b8 0%,
+      var(--gold) 45%,
+      var(--gold2) 100%
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  filter:drop-shadow(0 2px 10px rgba(255,159,67,.35));
+}
+
+.orn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:14px 8px;
+  color:var(--gold);
+}
+
+.orn i{
+  flex:1;
+  height:1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+.orn span{
+  font-size:16px;
+}
+
+.date{
+  display:inline-block;
+  margin:2px 0 4px;
+  padding:10px 22px;
+  border-radius:999px;
+
+  color:#2b1250;
+
+  font-family:"Yatra One",serif;
+  font-size:19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe29a,
+      var(--gold) 50%,
+      var(--saffron)
+    );
+
+  box-shadow:0 6px 22px rgba(255,159,67,.35);
+}
+
+.msg{
+  font-size:17px;
+  line-height:1.85;
+  color:var(--cream);
+  margin:12px 4px 0;
+}
+
+.msg b{
+  font-weight:400;
+  color:var(--gold);
+  border-bottom:1px solid rgba(246,201,107,.5);
+}
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin-top:6px;
+}
+
+.box{
+  padding:24px 14px 18px;
+  border-radius:22px 6px 22px 6px;
+  position:relative;
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.03)
+    );
+
+  border:1px solid rgba(246,201,107,.45);
+  backdrop-filter:blur(4px);
+}
+
+.ico{
+  position:absolute;
+  left:50%;
+  top:-22px;
+  transform:translateX(-50%);
+
+  width:44px;
+  height:44px;
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+  font-size:21px;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffe29a,
+      var(--gold2)
+    );
+
+  box-shadow:
+    0 0 0 4px var(--plum),
+    0 0 18px rgba(255,159,67,.6);
+}
+
+.tag{
+  display:inline-block;
+  margin:6px 0 8px;
+  padding:4px 16px;
+  border-radius:999px;
+
+  background:rgba(246,201,107,.16);
+  color:var(--gold);
+
+  font-size:16px;
+  border:1px solid rgba(246,201,107,.4);
+}
+
+.big{
+  font-family:"Yatra One",serif;
+  font-size:24px;
+  color:var(--saffron);
+  line-height:1.3;
+}
+
+.box p{
+  font-size:16px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.box p strong{
+  font-weight:400;
+  color:var(--cream);
+}
+
+.pill{
+  display:inline-block;
+  margin-top:26px;
+  padding:9px 20px;
+  border-radius:14px;
+
+  font-style:italic;
+  font-size:16px;
+  color:var(--gold);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(246,201,107,.16),
+      transparent
+    );
+
+  border-top:1px solid rgba(246,201,107,.35);
+  border-bottom:1px solid rgba(246,201,107,.35);
+}
+
+.by{
+  margin-top:18px;
+  color:var(--rose);
+  font-size:16px;
+}
+
+.names{
+  font-family:"Yatra One",serif;
+  font-size:clamp(21px,6vw,25px);
+  line-height:1.6;
+  margin-top:4px;
+  color:var(--cream);
+}
+
+.names span{
+  display:block;
+}
+
+.diyas{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  margin-top:20px;
+  font-size:22px;
+}
+
+.diyas span{
+  animation:fl 2.4s ease-in-out infinite alternate;
+}
+
+.diyas span:nth-child(2n){
+  animation-delay:.6s;
+}
+
+@keyframes fl{
+  from{
+    transform:translateY(0);
+    filter:drop-shadow(0 0 4px #ff9f43);
+  }
+
+  to{
+    transform:translateY(-3px);
+    filter:drop-shadow(0 0 12px #ffd15c);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .stars,
+  .diyas span{
+    animation:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="card">
+
+  <div class="stars"></div>
+  <div class="garland"></div>
+
+  <div class="z">
+
+    <div class="namah">
+      ॥ श्री गणेशाय नमः ॥
+    </div>
+
+    <!-- ॐ आणि कमळ -->
+    <svg class="emblem"
+         viewBox="0 0 240 200"
+         role="img"
+         aria-label="ॐ आणि कमळ">
+
+      <defs>
+
+        <radialGradient
+          id="halo"
+          cx="50%"
+          cy="45%"
+          r="55%">
+
+          <stop
+            offset="0"
+            stop-color="#ffd98a"
+            stop-opacity=".9"/>
+
+          <stop
+            offset="60%"
+            stop-color="#ff9f43"
+            stop-opacity=".25"/>
+
+          <stop
+            offset="1"
+            stop-color="#ff9f43"
+            stop-opacity="0"/>
+
+        </radialGradient>
+
+        <linearGradient
+          id="petal"
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="1">
+
+          <stop
+            offset="0"
+            stop-color="#ffe6a8"/>
+
+          <stop
+            offset="1"
+            stop-color="#ff7a9c"/>
+
+        </linearGradient>
+
+      </defs>
+
+      <circle
+        cx="120"
+        cy="82"
+        r="78"
+        fill="url(#halo)"/>
+
+      <circle
+        cx="120"
+        cy="82"
+        r="58"
+        fill="none"
+        stroke="#f6c96b"
+        stroke-width="1.5"/>
+
+      <circle
+        cx="120"
+        cy="82"
+        r="66"
+        fill="none"
+        stroke="#f6c96b"
+        stroke-width="1"
+        stroke-dasharray="2 6"
+        opacity=".8"/>
+
+      <text
+        x="120"
+        y="112"
+        text-anchor="middle"
+        font-size="84"
+        fill="#f6c96b"
+        font-family="'Yatra One','Tiro Devanagari Marathi',serif">
+        ॐ
+      </text>
+
+      <g transform="translate(0,4)">
+
+        <g
+          fill="url(#petal)"
+          stroke="#fff2d6"
+          stroke-width=".8"
+          opacity=".95">
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(-72 120 192)"/>
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(72 120 192)"/>
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(-42 120 192)"/>
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(42 120 192)"/>
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(-14 120 192)"/>
+
+          <ellipse
+            cx="120"
+            cy="158"
+            rx="15"
+            ry="34"
+            transform="rotate(14 120 192)"/>
+
+        </g>
+      </g>
+
+    </svg>
+
+    <h1>
+      गणपती पूजन<br>
+      व स्नेहभोजन
+    </h1>
+
+    <div class="orn">
+      <i></i>
+      <span>❁</span>
+      <i></i>
+    </div>
+
+    <div class="date">
+      बुधवार · २३/०९/२०२६
+    </div>
+
+    <p class="msg">
+
+      आपणास कळविण्यात येत आहे की,
+      आमच्या येथे दरवर्षी प्रमाणे याहीवर्षी
+      <b>श्री गणेश उत्सव</b> प्रित्यर्थ
+      <b>बुधवार दि. २३/०९/२०२६</b> ला
+      श्री पूजनाचा व भोजनाचा कार्यक्रम
+      करण्याचे ठरविले आहे.
+
+      करिता आपली उपस्थिती प्रार्थनीय आहे.
+
+    </p>
+
+    <div class="orn">
+      <i></i>
+      <span>✦</span>
+      <i></i>
+    </div>
+
+    <div class="info">
+
+      <!-- आरती -->
+      <section class="box">
+
+        <div class="ico">🪔</div>
+
+        <div class="tag">
+          आरतीची वेळ :
+        </div>
+
+        <div class="big">
+          सायं. ६ वाजता
+        </div>
+
+        <p>
+          व भोजन वेळ
+          <br>
+          <strong>सायं. ७ वाजता</strong>
+          <br>
+          ते आपल्या आगमनापर्यंत.
+        </p>
+
+      </section>
+
+      <!-- स्थळ -->
+      <section class="box">
+
+        <div class="ico">📍</div>
+
+        <div class="tag">
+          स्थळ :-
+        </div>
+
+        <p>
+
+          <strong class="big" style="font-size:22px">
+            आमचे निवास स्थान
+          </strong>
+
+          <br>
+
+          वॉर्ड क्रमांक २
+          <br>
+
+          काळा गोटा रोड
+          <br>
+
+          सावरगाव तह. नरखेड,
+          <br>
+
+          जि. नागपूर
+
+        </p>
+
+      </section>
+
+    </div>
+
+    <div class="pill">
+      (बोलावण्याची वाट पाहू नये.)
+    </div>
+
+    <div class="by">
+      ✦ विनीत ✦
+    </div>
+
+    <div class="names">
+
+      <span>
+        Sunil Shravanji Rewatkar
+      </span>
+
+      <span>
+        Prathmesh Sunilji Rewatkar
+      </span>
+
+    </div>
+
+    <div class="diyas" aria-hidden="true">
+      <span>🪔</span>
+      <span>🪔</span>
+      <span>🪔</span>
+      <span>🪔</span>
+      <span>🪔</span>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>
